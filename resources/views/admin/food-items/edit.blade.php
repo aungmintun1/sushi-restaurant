@@ -29,21 +29,37 @@
      
            
             <div class="row">
-                <!-- ============================================================== -->
-                <!-- basic form -->
-                <!-- ============================================================== -->
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <div class="card">
-                        <h5 class="card-header">Edit Food Item</h5>
+                        <h5 class="card-header">Create New Food Item</h5>
                         <div class="card-body">
-                            <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                            <form id="basicform" method="POST" action="/admin/food-items/{{$item->id}}">
+                                @csrf
+                                @method('PUT')
                                 <div class="form-group">
-                                    <label for="inputItem">Edit Item Name</label>
-                                    <input id="inputItem" type="text" name="Item" data-parsley-trigger="change" required="" placeholder="Enter Item Name" autocomplete="off" class="form-control">
+                                    <label for="inputItem">Food Title</label>
+                                    <input id="inputItem" type="text" name="title" data-parsley-trigger="change" required="" placeholder="Enter Item Name" value="{{$item->title}}" autocomplete="off" class="form-control">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputItemImageUrl">Edit Item Image Url</label>
-                                    <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                    <label for="inputItem">Price</label>
+                                    <input id="inputItem" type="text" name="price" data-parsley-trigger="change" required="" placeholder="Enter Price" value="{{$item->price}}" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputcategory">Category</label>
+                                    <select name="category_id" class="form-control" id="inputrole">
+                                       
+                                        @foreach ($categories as $category)
+                                            <option value="{{$category->id}}" @if($item->id==$category->id) selected @endif>{{$category->title}} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputItemImageUrl">Item Image Url</label>
+                                    <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" value="{{$item->image_url}}" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputdescription">Description</label>
+                                    <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write a Description">{{$item->description}}</textarea>
                                 </div>
                               
                                 <div class="row">
@@ -61,9 +77,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- ============================================================== -->
-                <!-- end basic form -->
-                <!-- ============================================================== -->
      
             </div>
          

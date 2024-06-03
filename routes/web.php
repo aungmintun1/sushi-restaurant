@@ -22,12 +22,18 @@ Route::get('/offers', [StaticPagesController::class, 'offers']);
 //food-categories
 Route::get('/admin/food-categories', [FoodCategoriesController::class, 'index']);
 Route::get('/admin/food-categories/create', [FoodCategoriesController::class, 'create']);
+Route::post('/admin/food-categories/', [FoodCategoriesController::class, 'store']);
 Route::get('/admin/food-categories/{id}/edit', [FoodCategoriesController::class, 'edit']);
+Route::put('/admin/food-categories/{id}', [FoodCategoriesController::class, 'update']);
+Route::delete('/admin/food-categories/{id}', [FoodCategoriesController::class, 'destroy']);
 
 //food-items
 Route::get('/admin/food-items', [FoodItemsController::class, 'index']);
 Route::get('/admin/food-items/create', [FoodItemsController::class, 'create']);
+Route::post('/admin/food-items', [FoodItemsController::class, 'store']);
 Route::get('/admin/food-items/{id}/edit', [FoodItemsController::class, 'edit']);
+Route::put('/admin/food-items/{id}', [FoodItemsController::class, 'update']);
+Route::delete('/admin/food-items/{id}', [FoodItemsController::class, 'destroy']);
 
 //Customers
 Route::get('/admin/customers/offers-members', [CustomersController::class, 'allOffersMembers']);

@@ -36,14 +36,20 @@
                     <div class="card">
                         <h5 class="card-header">Edit Food Category</h5>
                         <div class="card-body">
-                            <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                            <form id="basicform" method="POST" action="/admin/food-categories/{{$category->id}}">
+                                @csrf
+                                @method('PUT')
                                 <div class="form-group">
                                     <label for="inputCategory">Edit Category Name</label>
-                                    <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter Category Name" autocomplete="off" class="form-control">
+                                    <input id="inputCategory" type="text" name="title" data-parsley-trigger="change" value="{{$category->title}}" required="" placeholder="Enter Category Name" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputCategoryDescription">Edit Category Description</label>
+                                    <input id="inputCategoryDescription" type="text" name="Description" data-parsley-trigger="change" value="{{$category->description}}" required="" placeholder="lorem ipsum" autocomplete="off" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCategoryImageUrl">Edit Category Image Url</label>
-                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" value="{{$category->image_url}}" required="" placeholder="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
                                 </div>
                               
                                 <div class="row">

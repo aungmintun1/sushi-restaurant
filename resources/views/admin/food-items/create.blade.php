@@ -36,14 +36,33 @@
                     <div class="card">
                         <h5 class="card-header">Create New Food Item</h5>
                         <div class="card-body">
-                            <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                            <form id="basicform" method="POST" action="/admin/food-items">
+                                @csrf
                                 <div class="form-group">
-                                    <label for="inputItem">Item Name</label>
-                                    <input id="inputItem" type="text" name="Item" data-parsley-trigger="change" required="" placeholder="Enter Item Name" autocomplete="off" class="form-control">
+                                    <label for="inputItem">Food Title</label>
+                                    <input id="inputItem" type="text" name="title" data-parsley-trigger="change" required="" placeholder="Enter Item Name" value="Sushi" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputItem">Price</label>
+                                    <input id="inputItem" type="text" name="price" data-parsley-trigger="change" required="" placeholder="Enter Price" value="9" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputcategory">Category</label>
+                                    <select name="category_id" class="form-control" id="inputrole">
+                                       
+                                        @foreach ($categories as $category)
+                                            <option value="{{$category->id}}"
+                                            >{{$category->title}}</option>
+                                        @endforeach
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputItemImageUrl">Item Image Url</label>
-                                    <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                    <input id="inputItemImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" value="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputdescription">Description</label>
+                                    <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write a Description"></textarea>
                                 </div>
                               
                                 <div class="row">

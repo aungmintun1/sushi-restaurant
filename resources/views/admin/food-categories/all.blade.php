@@ -39,19 +39,30 @@
                                     <tr>
                                         <th scope="col">id</th>
                                         <th scope="col">Title</th>
+                                        <th scope="col">Image</th>
                                         <th scope="col">Date Created</th>
                                         <th scope="col">Edit</th>
                                         <th scope="col">Delete</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @foreach ($categories as $category )
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Burgers</td>
-                                        <td>2/02/22</td>
-                                        <td><a href="/admin/food-categories/1/edit"><i class="far fa-edit"></i></a></td>
-                                        <td><a href="/admin/food-categories/1/delete" onclick="if (!confirm('Are you sure you want delete category?')) {return false;}"><i class="far fa-trash-alt"></i></a></td>
+                                        <th scope="row">{{$category->id}}</th>
+                                        <td>{{$category->title}}</td>
+                                        <td>{{$category->image_url}}</td>
+                                        <td>{{date('m/d/Y', strtotime($category->updated_at))}}</td>
+                                        <td><a href="/admin/food-categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a></td>
+                                        <td>
+                                        <form  method="POST" action="/admin/food-categories/{{$category->id}}">
+                                          @csrf
+                                          @method('DELETE')
+                                          <a href="/admin/food-categories/{{$category->id}}" onclick="event.preventDefault(); this.closest('form').submit();"><i class="far fa-trash-alt"></i></a>
+                                        </form>
+                                        </td>  
                                     </tr>
+                                      
+                                  @endforeach
                                  
                                 </tbody>
                             </table>

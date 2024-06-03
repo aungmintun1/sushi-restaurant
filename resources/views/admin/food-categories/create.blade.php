@@ -36,14 +36,19 @@
                     <div class="card">
                         <h5 class="card-header">Create New Food Category</h5>
                         <div class="card-body">
-                            <form action="#" id="basicform" data-parsley-validate="" novalidate="">
+                            <form id="basicform" method="POST" action="/admin/food-categories">
+                                @csrf
                                 <div class="form-group">
-                                    <label for="inputCategory">Category Name</label>
-                                    <input id="inputCategory" type="text" name="category" data-parsley-trigger="change" required="" placeholder="Enter Category Name" autocomplete="off" class="form-control">
+                                    <label for="inputCategory">Category Title</label>
+                                    <input id="inputCategory" type="text" name="title" data-parsley-trigger="change" required="" placeholder="Enter Category Name" value="Sushi" autocomplete="off" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCategoryImageUrl">Category Image Url</label>
-                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" placeholder="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" value="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputCategoryImageUrl">Category Description</label>
+                                    <input id="inputCategoryDescription" type="text" name="description" data-parsley-trigger="change" required="" value="Lorem Ipsum" autocomplete="off" class="form-control">
                                 </div>
                               
                                 <div class="row">
