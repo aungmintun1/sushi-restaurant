@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\admin\CustomersController;
 use App\Http\Controllers\admin\FoodItemsController;
+use App\Http\Controllers\admin\MemberController;
+use App\Http\Controllers\admin\ReservationController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaticPagesController;
@@ -15,9 +17,15 @@ Route::get('/', [StaticPagesController::class, 'home']);
 Route::get('/menu', [StaticPagesController::class, 'menu']);
 Route::get('/menu/{slug}', [StaticPagesController::class, 'singleMenu']);
 Route::get('/about', [StaticPagesController::class, 'about']);
-Route::get('/reservations', [StaticPagesController::class, 'reservations']);
 Route::get('/contact', [StaticPagesController::class, 'contact']);
+
 Route::get('/offers', [StaticPagesController::class, 'offers']);
+Route::post('/offers', [StaticPagesController::class, 'registerMember']);
+Route::get('/offers/thank-you', [StaticPagesController::class, 'thankYou']);
+
+Route::get('/reservations', [StaticPagesController::class, 'reservations']);
+Route::post('/reservations', [StaticPagesController::class, 'saveReservation']);
+Route::get('/reservations/thank-you', [StaticPagesController::class, 'thankYou']);
 
 //food-categories
 Route::get('/admin/food-categories', [FoodCategoriesController::class, 'index']);
@@ -38,6 +46,15 @@ Route::delete('/admin/food-items/{id}', [FoodItemsController::class, 'destroy'])
 //Customers
 Route::get('/admin/customers/offers-members', [CustomersController::class, 'allOffersMembers']);
 Route::get('/admin/customers/reservations', [CustomersController::class, 'allReservations']);
+
+
+//Members
+Route::get('/admin/members', [MemberController::class, 'index']);
+Route::delete('/admin/members/{id}', [MemberController::class, 'destroy']);
+
+//Reservations
+Route::get('/admin/reservations', [ReservationController::class, 'index']);
+Route::delete('/admin/reservations/{id}', [ReservationController::class, 'destroy']);
 
 //users
 Route::get('/admin/users', [UsersController::class, 'index']);
