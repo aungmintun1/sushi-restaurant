@@ -40,12 +40,12 @@
                     @csrf
                     <div class="form-group">
                         <input class="form-control form-control-lg" autocomplete="off"
-                        placeholder="Email address" id="email" type="email" name="email" value="aung@gmail.com" required autofocus>
+                        placeholder="Email address" id="email" type="email" name="email" value="billy@gmail.com" required autofocus>
                         <span style="color: red;">@error('email') {{$message}} @enderror</span>
                     </div>
                     <div class="form-group">
                         <input class="form-control form-control-lg" placeholder="Password" id="password" class="block mt-1 w-full"
-                         type="password" name="password" required autocomplete="current-password" value="password">
+                         type="password" name="password" required autocomplete="current-password" value="12345678">
                          <span style="color: red;">@error('password') {{$message}} @enderror</span>
                     </div>
 

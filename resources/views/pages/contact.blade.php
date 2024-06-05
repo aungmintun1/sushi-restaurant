@@ -15,11 +15,14 @@
             <h1>Contact Us</h1>
             <h3>Address</h3>
             <p>
+              730 NW 36th St,
+              Miami, FL 33127
               {{-- {{$settings["general"]->address_1}} {{$settings["general"]->address_2}},<br>
               {{$settings["general"]->city}}, {{$settings["general"]->state}} {{$settings["general"]->zipcode}} --}}
             </p>
             <h3>Phone Number</h3>
             <p>
+              347-231-4545
               {{-- <a href="tel:{{$settings["general"]->phone_number}}">{{$settings["general"]->phone_number}}</a> --}}
             </p>
           </div>

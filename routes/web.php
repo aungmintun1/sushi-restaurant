@@ -67,7 +67,7 @@ Route::delete('/admin/users/{id}', [UsersController::class, 'destroy']);
 
 
 //Admin
-Route::get('/admin', [AdminController::class, 'dashboard']);
+Route::get('/admin', [AdminController::class, 'dashboard'])->middleware('role:Admin');
 
 Route::get('admin/login', function () {
     return view('admin.login');

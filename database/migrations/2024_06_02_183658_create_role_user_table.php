@@ -21,6 +21,12 @@ return new class extends Migration
         Schema::table('role_user', function (Blueprint $table) {
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
+            // we establish a relationship with Roles and Users through role_users table. note that there is no model for this.
+            //role_id connects to id of roles and user_id connects to id of users
+
+            //foreign refers to the column in the table itself, references is the column in the table that we reference, on is the foreign table, 
+            //onDelete eliminates the relationships after deletion
         });
     }
 
