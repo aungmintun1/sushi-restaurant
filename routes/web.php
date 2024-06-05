@@ -29,19 +29,19 @@ Route::get('/reservations/thank-you', [StaticPagesController::class, 'thankYou']
 
 //food-categories
 Route::get('/admin/food-categories', [FoodCategoriesController::class, 'index']);
-Route::get('/admin/food-categories/create', [FoodCategoriesController::class, 'create']);
+Route::get('/admin/food-categories/create', [FoodCategoriesController::class, 'create'])->middleware('role:Admin');
 Route::post('/admin/food-categories/', [FoodCategoriesController::class, 'store']);
-Route::get('/admin/food-categories/{id}/edit', [FoodCategoriesController::class, 'edit']);
+Route::get('/admin/food-categories/{id}/edit', [FoodCategoriesController::class, 'edit'])->middleware('role:Admin');
 Route::put('/admin/food-categories/{id}', [FoodCategoriesController::class, 'update']);
-Route::delete('/admin/food-categories/{id}', [FoodCategoriesController::class, 'destroy']);
+Route::delete('/admin/food-categories/{id}', [FoodCategoriesController::class, 'destroy'])->middleware('role:Admin');
 
 //food-items
 Route::get('/admin/food-items', [FoodItemsController::class, 'index']);
-Route::get('/admin/food-items/create', [FoodItemsController::class, 'create']);
+Route::get('/admin/food-items/create', [FoodItemsController::class, 'create'])->middleware('role:Admin');
 Route::post('/admin/food-items', [FoodItemsController::class, 'store']);
-Route::get('/admin/food-items/{id}/edit', [FoodItemsController::class, 'edit']);
+Route::get('/admin/food-items/{id}/edit', [FoodItemsController::class, 'edit'])->middleware('role:Admin');
 Route::put('/admin/food-items/{id}', [FoodItemsController::class, 'update']);
-Route::delete('/admin/food-items/{id}', [FoodItemsController::class, 'destroy']);
+Route::delete('/admin/food-items/{id}', [FoodItemsController::class, 'destroy'])->middleware('role:Admin');
 
 //Customers
 Route::get('/admin/customers/offers-members', [CustomersController::class, 'allOffersMembers']);
@@ -67,7 +67,7 @@ Route::delete('/admin/users/{id}', [UsersController::class, 'destroy']);
 
 
 //Admin
-Route::get('/admin', [AdminController::class, 'dashboard'])->middleware('role:Admin');
+Route::get('/admin', [AdminController::class, 'dashboard']);
 
 Route::get('admin/login', function () {
     return view('admin.login');

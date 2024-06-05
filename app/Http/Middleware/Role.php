@@ -36,7 +36,7 @@ class Role
             if($user->roles->contains($ro)){
                 return $next($request);
             } else{
-                return redirect('/admin');
+                return redirect('/');
             }
 
         }

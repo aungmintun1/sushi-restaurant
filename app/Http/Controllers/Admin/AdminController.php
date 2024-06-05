@@ -10,7 +10,7 @@ class AdminController extends Controller
     public function dashboard(){
         // $user = Auth::user();
         // return response()->json($user->roles);
-        
+
         return view('admin/dashboard');
     }
 }
