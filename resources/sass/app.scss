@@ -6,7 +6,7 @@
 @import "pages/contact";
 @import "pages/waitlist";
 @import "pages/offers";
-@import "variables";
+@import "_variables";
 @import "menu/index";
 @import "menu/single-menu";
 @import "home";
@@ -45,6 +45,7 @@ table {
 body {
     font-family: "Roboto", sans-serif;
 }
+
 #app-layout {
     display: grid;
     // grid-template-columns: 350px 1fr;
@@ -237,7 +238,8 @@ body {
     }
 }
 #food-preview {
-    background: #f4f8fb;
+
+    background: radial-gradient(ellipse at center, #ee2634 0%, #d82733 100%);
     padding: 100px;
     display: flex;
     justify-content: center;
@@ -246,7 +248,9 @@ body {
     h2 {
         text-align: center;
         margin-bottom: 3rem;
+        color:white;
     }
+    
     .button-rounded {
         background: #ed4852;
         color: white;
@@ -263,7 +267,7 @@ body {
 
         .left-btn,
         .right-btn {
-            background: red;
+            background: black;
             color: white;
             height: 50px;
             width: 50px;

@@ -1,4 +1,4 @@
-<section id="food-preview">
+<section id="food-preview" class="red-bg" >
     <h2>We have everything you need to kill your hunger</h2>
     
     <div class="container">
@@ -10,8 +10,8 @@
       </div>
       <div class="food-slider">
         <div class="sliding-system">
-        {{-- @foreach ($categories as $category)
-            <a href="/menu/{{$category->title}}" class="slide">
+        @foreach ($categories as $category)
+            <a href="/menu/{{$category->title}}" class="slide capitalize">
               <div class="background"></div>
               <div class="content">
                 <div class="food-title">
@@ -25,7 +25,7 @@
                 </div>
               </div>
           </a>
-        @endforeach --}}
+        @endforeach
           
           
         </div>

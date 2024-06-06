@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\FoodCategory;
+use App\Models\FoodItem;
 use App\Models\Member;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
@@ -8,7 +10,12 @@ use Illuminate\Http\Request;
 class StaticPagesController extends Controller
 {
     public function home(){
-        return view('home');
+        $categories = FoodCategory::All();
+
+        
+        return view('home',[
+            'categories'=>$categories,
+        ]);
     }
     public function about(){
         return view('pages.about');
@@ -68,11 +75,28 @@ class StaticPagesController extends Controller
         return view('pages.thank-you');
     }
     public function menu(){
-        return view('menu.all-categories');
+
+        $categories = FoodCategory::All();
+
+
+        return view('menu.all-categories',[
+            'categories'=>$categories,
+            
+        ]);
+
     }
 
-    public function singleMenu(){
-        return view('menu.single-menu');
+    public function singleMenu($slug){
+
+        $foodCategory = FoodCategory::where('title', '=', $slug)->first();
+        $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
+
+        //first() gets a single record and get() gets all records that match
+
+        return view('menu.single-menu',[
+            "foodCategory" => $foodCategory,
+            "foodItems" => $foodItems
+        ]);
     }
 
 }

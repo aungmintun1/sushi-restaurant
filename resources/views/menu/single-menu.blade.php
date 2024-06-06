@@ -13,9 +13,9 @@
           <div class="content-box">
             <div class="row">
               <div class="col-md-12">
-                <h1>Burgers</h1>
+                <h1 class="capitalize">{{$foodCategory->title}}</h1>
               </div>
-              {{-- @foreach ($foodItems as $item)
+              @foreach ($foodItems as $item)
                 <div class="col-md-6">
                   <div class="item">
                     <div class="title">
@@ -27,7 +27,7 @@
                     </div>
                   </div>
                 </div>
-              @endforeach --}}
+              @endforeach
               
               
             </div>

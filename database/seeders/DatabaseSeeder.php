@@ -28,3 +28,5 @@ class DatabaseSeeder extends Seeder
         $this->call(ReservationSeeder::class);
     }
 }
+
+//FoodItem Id is dependent on category_id so categories should be on top of items
