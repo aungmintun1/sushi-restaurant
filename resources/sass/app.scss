@@ -54,11 +54,21 @@ body {
 
     .side-menu {
         position: absolute;
-        background: white;
-        padding: 50px;
+        background:white;
+        padding-top:50px;
   
         height: 100vh;
         width: 400px;
+
+       
+        .side-menu-bg{
+            background: url('img/sushi-sidemenu.png');
+            background-size: cover;
+            width: 400px;
+            z-index: -1;
+            height: 400px;
+          
+        }
         .logo {
   
             display: flex;
@@ -71,7 +81,7 @@ body {
             }
         }
         .menu {
-       
+            margin-left: 30px;
             margin-bottom: 50px;
             .menu-title {
                 text-transform: uppercase;
@@ -111,6 +121,7 @@ body {
         }
         .social-icons {
             display: flex;
+            margin-left: 30px;
             a {
                 display: flex;
                 justify-content: center;
@@ -143,29 +154,12 @@ body {
                 }
             }
         }
+   
     }
     #content-section {
-        transform: translate3d(300px, 0, 0);
-        max-width: calc(100vw - 300px);
-        background: #ed4852; /* Old browsers */
-        background: -moz-radial-gradient(
-            center,
-            ellipse cover,
-            #ed4852 0%,
-            #9c1b24 100%
-        ); /* FF3.6-15 */
-        background: -webkit-radial-gradient(
-            center,
-            ellipse cover,
-            #ed4852 0%,
-            #9c1b24 100%
-        ); /* Chrome10-25,Safari5.1-6 */
-        background: radial-gradient(
-            ellipse at center,
-            #ed4852 0%,
-            #9c1b24 100%
-        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        // overflow: hidden;
+        transform: translate3d(400px, 0, 0);
+        max-width: calc(100vw - 400px);
+  
     }
 }
 #information {
@@ -244,7 +238,7 @@ body {
 }
 #food-preview {
 
-    background: radial-gradient(ellipse at center, #ee2634 0%, #d82733 100%);
+    background: #f7f2ee;
     padding: 100px;
     display: flex;
     justify-content: center;
@@ -253,7 +247,8 @@ body {
     h2 {
         text-align: center;
         margin-bottom: 3rem;
-        color:white;
+        color:#30362F;
+        font-weight: 400;
     }
     
     .button-rounded {

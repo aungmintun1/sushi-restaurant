@@ -50,13 +50,6 @@
     <a href="#" target="new"><i class="fa fa-twitter" aria-hidden="true"></i></a>
     <a href="#" target="new"><i class="fa fa-instagram" aria-hidden="true"></i></a>
   </div>
-  <div class="location">
-    <div class="address">
-      {{-- {{$settings["general"]->address_1}} {{$settings["general"]->address_2}},<br>
-      {{$settings["general"]->city}}, {{$settings["general"]->state}} {{$settings["general"]->zipcode}} --}}
-    </div>
-    <div class="phone-number">
-      {{-- <a href="tel:{{$settings["general"]->phone_number}}">{{$settings["general"]->phone_number}}</a> --}}
-    </div>
-  </div>
+  <div class="side-menu-bg"></div>
+
 </div>
