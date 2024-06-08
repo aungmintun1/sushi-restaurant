@@ -35,7 +35,16 @@
                 background: #9c1b24;
                 border: none;
                 padding: 20px 40px;
+                font-size: 1.2rem;
+                transition: all 0.5s;
+
+             
             }
+
+            button[type="submit"]:hover{
+                background-color: #420f12;
+            }
+           
         }
     }
 }

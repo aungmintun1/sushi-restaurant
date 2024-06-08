@@ -84,12 +84,13 @@
                 @enderror
               </div>
               <div class="form-group">
-                <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+                <button type="submit" class="confirm-btn btn btn-primary mb-2">Confirm</button>
               </div>
             </form>
           </div>
+          <p>Please Note: This is not a reservation. You will be added to the current wait list. You may have a short wait once you arrive while we prepare your table.</p>
           <div class="col-md-6">
-            <p>Please Note: This is not a reservation. You will be added to the current wait list. You may have a short wait once you arrive while we prepare your table.</p>
+         
           </div>
         </div>
       </div>

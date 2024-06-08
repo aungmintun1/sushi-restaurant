@@ -75,7 +75,7 @@
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <button type="submit" class="btn btn-primary mb-2">Confirm</button>
+                    <button type="submit" class="confirm-btn btn btn-primary mb-2">Confirm</button>
                   </div>
                 </div>
               </div>
