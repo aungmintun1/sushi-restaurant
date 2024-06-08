@@ -7,9 +7,11 @@
         <section id="app-layout">
     @include('includes.side-menu')
     <div class="welcome-jumbo">
-      <div class="status">NEW</div>
-      <h1>Billy Burger</h1>
-      <img src="/img/hamburger-and-fries-png-4.png" class="burger-fries">
+      <h1>A True Taste of Japanese Cousine</h1>
+      <div class="welcome-btn-container">
+        <button class="welcome-btn">Reservations</button>
+        <button class="welcome-btn">Get Offers</button>
+      </div>
     </div>
   </section>
   @yield('content')
