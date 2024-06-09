@@ -88,14 +88,11 @@ class StaticPagesController extends Controller
 
     public function singleMenu($slug){
 
-        $foodCategory = FoodCategory::where('title', '=', $slug)->first();
-        $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
+        $category = FoodCategory::where('title', $slug)->with('food_items')->first();
 
-        //first() gets a single record and get() gets all records that match
-
+        // return response()->json($category);
         return view('menu.single-menu',[
-            "foodCategory" => $foodCategory,
-            "foodItems" => $foodItems
+            'category'=>$category,
         ]);
     }
 

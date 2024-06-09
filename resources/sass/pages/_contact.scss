@@ -13,14 +13,34 @@
         margin-bottom: .5rem;
     }
     p {
-        font-size: 0.9rem;
+        font-size: 1.5rem;
         line-height: 2;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
         font-weight: 500;
+    
     }
     iframe{
       width: 100%;
     }
+    i{
+        font-size: 2rem;
+        margin-right:1.5rem;
+        color:#b5945b;
+    }
+    .time-container{
+        display: flex;
+        align-items: baseline;
+    }
+    .contact-social{
+        margin-top:3rem;
+        text-align: left;
+       
+        i{
+            font-size: 2.5rem;
+            margin-right:1.5rem;
+        }
+    }
+
 }
 @media (min-width: 0px) and (max-width: 767px) {
     #contact-page {

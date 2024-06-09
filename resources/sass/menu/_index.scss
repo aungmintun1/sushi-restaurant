@@ -14,7 +14,7 @@
       
        
         .side-menu-bg{
-            background: url('img/sushi-sidemenu.png');
+            background: url('/img/sushi-sidemenu.png');
             background-size: cover;
             width: 400px;
             z-index: -1;
@@ -143,6 +143,10 @@
     box-sizing: border-box; 
     padding: 10px;
    
+}
+.single-menu-box{
+    width: 100%;
+    padding: 20px 100px 100px 100px;
 }
 .item-box{
     margin:2rem 0;

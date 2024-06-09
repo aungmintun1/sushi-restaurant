@@ -1,38 +1,33 @@
-@extends('layouts.app')
+@extends('layouts.full-menu')
 
 @section('title')
-{{-- {{$foodItem}} - {{$settings["general"]->site_title}}  --}}
+Food Menu 
 @endsection
 
 @section('content')
-    <div id="single-menu-page">
-      <div class="row">
-        <div class="col-sm-12
-        offset-md-1 col-md-10
-        offset-lg-2 col-lg-8">
-          <div class="content-box">
-            <div class="row">
-              <div class="col-md-12">
-                <h1 class="capitalize">{{$foodCategory->title}}</h1>
-              </div>
-              @foreach ($foodItems as $item)
-                <div class="col-md-6">
-                  <div class="item">
-                    <div class="title">
-                      <h4>{{$item->title}}</h4>
-                      <span class="price">${{$item->price}}</span>
-                    </div>
-                    <div class="description">
-                      <p>{{$item->description}}</p>
-                    </div>
-                  </div>
-                </div>
-              @endforeach
-              
-              
-            </div>
-          </div>
+    <div id="menu-page">
+    
+
+
+  
+     <div class="single-menu-box">
+       <h2>{{$category->title}}</h2>
+        @foreach ($category->food_items as $item )
+        <div class="item-box">
+         <div class="item-content">
+          <h3>{{$item->title}} </h3>
+          <div class="dashline"></div>
+          <p class="price">{{$item->price}} </p>
+         </div>
+         <p>{{$item->description}} </p>
+      </div>
+      @endforeach
+
+   
+        
+
         </div>
       </div>
+      
     </div>
 @endsection

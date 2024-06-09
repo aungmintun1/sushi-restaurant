@@ -1,5 +1,7 @@
 <section id="food-preview" class="red-bg" >
+    <h3>From The Kitchen</h3>
     <h2>Explore Our Menu</h2>
+    <div class="category-titles">@foreach ($categories as $category) <a href="#">{{$category->title}}</a>   @endforeach</div>
     
     <div class="container">
       <div class="left-btn">
