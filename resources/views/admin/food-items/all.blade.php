@@ -34,7 +34,7 @@
                     <div class="card">
                         <h5 class="card-header">All Food Items</h5>
                         <div class="card-body">
-                            <table class="table">
+                            <table class="table mb-8">
                                 <thead>
                                     <tr>
                                         <th scope="col">id</th>
@@ -66,6 +66,7 @@
                                  
                                 </tbody>
                             </table>
+                              {{$items->links()}}
                         </div>
                     </div>
                 </div>
