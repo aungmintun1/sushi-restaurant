@@ -76,12 +76,12 @@ class StaticPagesController extends Controller
     }
     public function menu(){
 
-        $categories = FoodCategory::All();
-
+        $categories = FoodCategory::with('food_items')->get();
+     
+        // return response()->json($categories);
 
         return view('menu.all-categories',[
             'categories'=>$categories,
-            
         ]);
 
     }
