@@ -70,6 +70,7 @@ Route::delete('/admin/users/{id}', [UsersController::class, 'destroy']);
 
 //Admin
 Route::get('/admin', [AdminController::class, 'dashboard']);
+Route::get('/admin/dailyRevenueLast30', [AdminController::class, 'dailyRevenueLast30']);
 
 Route::get('admin/login', function () {
     return view('admin.login');

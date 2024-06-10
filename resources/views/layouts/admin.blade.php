@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title> Admin Dashboard </title>
 
 </head>
 
@@ -203,6 +203,7 @@
     <script src="/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="/assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="/assets/libs/js/dashboard-ecommerce.js"></script>
+
     
 </body>
  

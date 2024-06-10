@@ -48,6 +48,8 @@ class AdminController extends Controller
         $total_reservations= $total_customers_last_30->total ?? 0;
         $latestReservations = Reservation::where('guests_total', '>', 0)->limit(5)->orderBy('created_at', 'desc')->get();
 
+
+        // return response()->json($latestReservations);
         return view('admin/dashboard',[
 
             'total_income'=>$total_income,
@@ -56,6 +58,27 @@ class AdminController extends Controller
             'latestReservations'=>$latestReservations,
             'total_employees'=>$total_employees
         ]);
+
+        
+    }
+
+    
+    public function dailyRevenueLast30(){
+
+        return $estimated_income_daily_data = DB::table('reservations')
+            ->select(
+                DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d") as x'),
+                DB::raw('(sum(guests_total) * 27) as y')
+            )
+            ->groupBy(DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d")'))
+            ->orderByDesc(DB::raw('DATE_FORMAT(created_at, "%Y-%m-%d")'))
+            ->get();
+        
+        //for the total revenue chart
+        // x is the date and y is total number of guests multplied by $27(the average order)
+        //we do a get request to this for the chart in adminTemp/assets/lib/js/dashboard-ecommerce.js
+        //we then put the json data in the data property        
+
 
         
     }

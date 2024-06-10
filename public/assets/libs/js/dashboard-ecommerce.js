@@ -1,4 +1,4 @@
- 
+ console.log('dashboard-ecommer')
     
     $(function() {
         "use strict";
@@ -199,27 +199,40 @@
     // ============================================================== 
     // Total Revenue
     // ============================================================== 
-    Morris.Area({
-        element: 'morris_totalrevenue',
-        behaveLikeLine: true,
-        data: [
-            { x: '2016 Q1', y: 0, },
-            { x: '2016 Q2', y: 7500, },
-            { x: '2017 Q3', y: 15000, },
-            { x: '2017 Q4', y: 22500, },
-            { x: '2018 Q5', y: 30000, },
-            { x: '2018 Q6', y: 40000, }
-        ],
-        xkey: 'x',
-        ykeys: ['y'],
-        labels: ['Y'],
-        lineColors: ['#5969ff'],
-        resize: true
+    // Morris.Area({
+    //     element: 'morris_totalrevenue',
+    //     behaveLikeLine: true,
+    //     data: [
+    //         {x: "2020-02-01 15:00:00.000", y: 0 },
+    //         {x: "2020-02-02 15:00:00.000", y: 7500 },
+    //         {x: "2020-02-03 15:00:00.000", y: 15000 },
+    //         {x: "2020-02-04 15:00:00.000", y: 22500 },
+    //         {x: "2020-02-05 15:00:00.000", y: 30000 },
+    //         {x: "2020-02-06 15:00:00.000", y: 40000 }
+    //     ],
+    //     xkey: 'x',
+    //     ykeys: ['y'],
+    //     labels: ['Y'],
+    //     lineColors: ['#5969ff'],
+    //     resize: true
 
-    });
+    // });
 
+    $.get("/admin/dailyRevenueLast30", function(data) {
+        console.log(data)
 
-
+        Morris.Area({
+            element: 'morris_totalrevenue',
+            behaveLikeLine: true,
+            data: data,
+            xkey: 'x',
+            ykeys: ['y'],
+            labels: ['Y'],
+            lineColors: ['#5969ff'],
+            resize: true
+    
+        });
+    })
 
     // ============================================================== 
     // Revenue By Categories
