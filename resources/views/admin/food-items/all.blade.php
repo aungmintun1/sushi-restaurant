@@ -67,6 +67,7 @@
                                 </tbody>
                             </table>
                               {{$items->links()}}
+                              {{-- note that pagination works with tailwind css, so dont forget to import it --}}
                         </div>
                     </div>
                 </div>

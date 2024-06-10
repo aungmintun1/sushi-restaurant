@@ -54,6 +54,8 @@ Route::delete('/admin/members/{id}', [MemberController::class, 'destroy']);
 
 //Reservations
 Route::get('/admin/reservations', [ReservationController::class, 'index']);
+Route::get('/admin/reservations/create', [ReservationController::class, 'create']);
+Route::post('/admin/reservations', [ReservationController::class, 'store']);
 Route::delete('/admin/reservations/{id}', [ReservationController::class, 'destroy']);
 
 //users

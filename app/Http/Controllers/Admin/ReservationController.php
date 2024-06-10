@@ -15,6 +15,35 @@ class ReservationController extends Controller
         ]);
     }
 
+    public function create(){
+
+        return view('admin/reservations/create');
+    }
+
+    public function store(){
+
+        request()->validate([
+            'fname' => ['required', 'string'],
+            'lname' => ['required', 'string'],
+            'email' => ['required', 'string'],
+            'phone_number' => ['required', 'string'],
+            'guests_total' => ['required', 'string'],
+            'time' => ['required', 'string']
+        ]);
+        
+        $reservation = new Reservation();
+        $reservation->fname = request('fname');
+        $reservation->lname = request('lname');
+        $reservation->email = request('email');
+        $reservation->phone_number = request('phone_number');
+        $reservation->guests_total = request('guests_total');
+        $reservation->time = request('time');
+        $reservation->save();
+
+        
+        return redirect('admin/reservations');
+    }
+
     public function destroy($id){
         
         $reservation=Reservation::find($id);
