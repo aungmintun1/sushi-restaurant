@@ -38,7 +38,6 @@ Route::delete('/admin/food-categories/{id}', [FoodCategoriesController::class, '
 
 //food-items
 Route::get('/admin/food-items', [FoodItemsController::class, 'index']);
-Route::get('/admin/food-items/query', [FoodItemsController::class, 'query']);
 Route::get('/admin/food-items/results', [FoodItemsController::class, 'search']);
 Route::get('/admin/food-items/create', [FoodItemsController::class, 'create'])->middleware('role:Admin');
 Route::post('/admin/food-items', [FoodItemsController::class, 'store']);

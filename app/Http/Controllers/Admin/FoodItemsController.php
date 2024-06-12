@@ -18,27 +18,46 @@ class FoodItemsController extends Controller
         ]);
     }
 
-    
-    public function query(){
-       
-        return view('admin/food-items/query');
-    }
-
     public function search(Request $request)
     {
         // Validate the input
         $request->validate([
             'name' => 'required|string|max:255',
+            'min_price' => 'nullable|numeric|min:0',
+            'max_price' => 'nullable|numeric|min:0',
         ]);
 
-        // Get the name from the request
+        // Get the inputs from the request
         $name = $request->input('name');
+        $minPrice = $request->input('min_price');
+        $maxPrice = $request->input('max_price');
 
-        // Query the food items with name similar to the input
-        $foodItems = FoodItem::where('title', 'LIKE', '%' . $name . '%')->get();
+        // Query the food items within the price range
+        // make a query variable so you can continously check and add more search conditions
+
+        $query = FoodItem::query();
+
+        if ($name) {
+            $query->where('title', 'LIKE', '%' . $name . '%');
+        }
+
+        // $query->whereBetween('price', [$minPrice, $maxPrice]);
+        // finds price between inputted minimum and max price
+
+        if ($minPrice !== null && $maxPrice !== null) {
+            $query->whereBetween('price', [$minPrice, $maxPrice]);
+        } elseif ($minPrice !== null) {
+            $query->where('price', '>=', $minPrice);
+        } elseif ($maxPrice !== null) {
+            $query->where('price', '<=', $maxPrice);
+        }
+
+        $foodItems = $query->orderBy('price', 'asc')->get();
 
         // Return the search results view with the food items
-        return view('admin/food-items/results', compact('foodItems'));
+        return view('admin/food-items/results', [
+            'foodItems'=>$foodItems
+        ]);
     }
     public function create(){
         $categories=FoodCategory::All();

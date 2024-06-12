@@ -27,6 +27,24 @@
         <!-- ============================================================== -->
        
             <div class="row">
+            
+                    <div class="col-xl-3 col-lg-3 bg-white mb-12 p-2 rounded-xl h-1/2">
+                        <form action="/admin/food-items/results" method="GET" class="flex flex-col items-start gap-4 max-w-md mx-auto p-4 bg-white rounded-lg">
+                            <div class="w-full">
+                                <label for="name" class="block text-lg mb-2">Food Item Name</label>
+                                <input type="text" name="name" id="name" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+                            </div>
+                            <div class="w-full">
+                                <label for="min_price" class="block text-lg  mb-2">Min Price</label>
+                                <input type="number" name="min_price" id="min_price" step="0.01" class="w-full p-2 border border-gray-300 rounded">
+                            </div>
+                            <div class="w-full">
+                                <label for="max_price" class="block text-lg mb-2">Max Price</label>
+                                <input type="number" name="max_price" id="max_price" step="0.01" class="w-full mb-4 p-2 border border-gray-300 rounded">
+                            </div>
+                            <button type="submit" class="w-full px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Search</button>
+                        </form>
+                </div>
                 <!-- ============================================================== -->
                 <!-- basic table -->
                 <!-- ============================================================== -->
