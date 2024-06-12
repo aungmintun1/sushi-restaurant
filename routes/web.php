@@ -4,6 +4,7 @@ use App\Http\Controllers\admin\CustomersController;
 use App\Http\Controllers\admin\FoodItemsController;
 use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\ReservationController;
+use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\admin\UsersController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaticPagesController;
@@ -37,6 +38,8 @@ Route::delete('/admin/food-categories/{id}', [FoodCategoriesController::class, '
 
 //food-items
 Route::get('/admin/food-items', [FoodItemsController::class, 'index']);
+Route::get('/admin/food-items/query', [FoodItemsController::class, 'query']);
+Route::get('/admin/food-items/results', [FoodItemsController::class, 'search']);
 Route::get('/admin/food-items/create', [FoodItemsController::class, 'create'])->middleware('role:Admin');
 Route::post('/admin/food-items', [FoodItemsController::class, 'store']);
 Route::get('/admin/food-items/{id}/edit', [FoodItemsController::class, 'edit'])->middleware('role:Admin');
@@ -66,6 +69,8 @@ Route::get('/admin/users/{id}/edit', [UsersController::class, 'edit']);
 Route::put('/admin/users/{id}', [UsersController::class, 'update']);
 Route::delete('/admin/users/{id}', [UsersController::class, 'destroy']);
 
+//SEO
+Route::get('/admin/settings/general', [SettingController::class, 'general']);
 
 
 //Admin
