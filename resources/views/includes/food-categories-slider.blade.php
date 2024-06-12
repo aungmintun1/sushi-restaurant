@@ -12,6 +12,7 @@
       </div>
       <div class="food-slider">
         <div class="sliding-system">
+     
         @foreach ($categories as $category)
             <a href="/menu/{{$category->title}}" class="slide capitalize">
               <div class="background"></div>

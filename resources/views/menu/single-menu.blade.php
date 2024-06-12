@@ -17,7 +17,7 @@ Food Menu
          <div class="item-content">
           <h3>{{$item->title}} </h3>
           <div class="dashline"></div>
-          <p class="price">{{$item->price}} </p>
+          <p class="price">${{$item->price}} </p>
          </div>
          <p>{{$item->description}} </p>
       </div>

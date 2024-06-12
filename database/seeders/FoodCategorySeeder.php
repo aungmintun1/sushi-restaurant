@@ -16,44 +16,60 @@ class FoodCategorySeeder extends Seeder
     public function run(): void
     {
         DB::table('food_categories')->insert([
-            'title' => 'starters',
-            'description' => 'Kick off your meal with our delicious starters, perfect for whetting your appetite. Enjoy a variety of appetizers that are sure to set the tone for a delightful dining experience.',
-            'image_url' => '/img/CHIPS.png',
-            'updated_at' => Carbon::now(), 
-            'created_at' => Carbon::now()
-        ]);
-        DB::table('food_categories')->insert([
-            'title' => 'burgers',
-            'description' => 'Indulge in our mouth-watering burgers, made with the freshest ingredients and cooked to perfection. Each bite is a burst of flavor that satisfies your cravings for a hearty meal.',
-            'image_url' => '/img/hamburger-and-fries-png-4.png',
+            'title' => 'sushi & sashimi',
+            'description' => 'Experience the exquisite flavors of our Sushi & Sashimi, featuring expertly crafted rolls and the freshest slices of raw fish, served with traditional accompaniments for an authentic Japanese dining experience.',
+            'image_url' => '/img/sashimi.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
             'title' => 'entrees',
-            'description' => "Explore our diverse selection of entrees, crafted to provide a fulfilling and satisfying main course. From classic favorites to innovative dishes, there's something for everyone.",
-            'image_url' => '/img/342-3422633_pork-entrees-steak-pork-png.png',
+            'description' => "Indulge in our delicious entrées, offering a perfect start to your sushi experience with a variety of flavors and textures that set the stage for the main course.",
+            'image_url' => '/img/entrees.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
-            'title' => 'sides',
+            'title' => 'sushi rolls',
+            'description' => 'Savor our expertly crafted sushi rolls, combining fresh ingredients and exquisite flavors to create a delightful culinary experience.',
+            'image_url' => '/img/rolls.png',
+            'updated_at' => Carbon::now(), 
+            'created_at' => Carbon::now()
+        ]);
+        DB::table('food_categories')->insert([
+            'title' => 'desserts',
             'description' => "Complement your main course with our tasty sides. Whether you're looking for something light or indulgent, our sides are the perfect addition to any meal.",
+            'image_url' => '/img/Download-Cupcake-PNG-Transparent-Image-420x190.png',
+            'updated_at' => Carbon::now(), 
+            'created_at' => Carbon::now()
+        ]);
+   
+        DB::table('food_categories')->insert([
+            'title' => 'salads',
+            'description' => " Delight in our fresh and flavorful salads, crafted with crisp greens, vibrant vegetables, and unique dressings for a perfect start to your meal.",
             'image_url' => '/img/Download-Salad-Transparent-PNG.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
-            'title' => 'deserts',
-            'description' => "Complement your main course with our tasty sides. Whether you're looking for something light or indulgent, our sides are the perfect addition to any meal.",
-            'image_url' => '/img/Download-Cupcake-PNG-Transparent-Image-420x190.png',
+            'title' => 'starters',
+            'description' => "Begin your dining experience with our tantalizing starters, offering a variety of small bites to awaken your taste buds.",
+            'image_url' => '/img/starter.jpg',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
+            'title' => 'mains',
+            'description' => "Indulge in our exquisite main dishes, featuring a selection of expertly prepared sushi, sashimi, and other Japanese specialties.",
+            'image_url' => '/img/main.png',
+            'updated_at' => Carbon::now(), 
+            'created_at' => Carbon::now()
+        ]);
+    
+        DB::table('food_categories')->insert([
             'title' => 'drinks',
             'description' => "Quench your thirst with our refreshing selection of drinks. From handcrafted cocktails and fine wines to classic sodas and fresh juices, our drink menu has the perfect beverage to complement your meal. Enjoy a taste of refreshment with every sip.",
-            'image_url' => '/img/Download-Cupcake-PNG-Transparent-Image-420x190.png',
+            'image_url' => '/img/drink.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
