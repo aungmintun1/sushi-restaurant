@@ -31,6 +31,10 @@ class UsersController extends Controller
         $user->password = Hash::make(request('password'));
         $user->save(); 
         $user->roles()->attach(request('role_id'));
+        //add new relationship along with previous ones 
+        
+        // $user->roles()->sync([request('role_id')]);
+        //drop all previous relationships and replace
 
         return redirect('/admin/users');
 

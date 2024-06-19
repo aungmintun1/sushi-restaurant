@@ -25,6 +25,10 @@ class Role
         $user = Auth::user();
         //user must be logged in and information is in this variable 
 
+        if(!Auth::check()){
+            return redirect('/login');
+        }
+
         
         foreach($roles as $role){
          //in each iteration we check if the user->roles->title == $role
@@ -42,9 +46,7 @@ class Role
         }
 
         dd($roles);
-        if(!Auth::check()){
-            return redirect('/login');
-        }
+    
         
     }
 }
