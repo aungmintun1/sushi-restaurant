@@ -69,11 +69,4 @@
                 margin-bottom: 30px;
             }
         </style>
-           <style>
-            body {
-                transform: scale(0.75);
-                transform-origin: 0 0;
-                /* Adjust the height to prevent vertical scrolling */
-                height: calc(100% / 0.75);
-            }
-        </style>
+      
