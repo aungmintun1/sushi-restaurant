@@ -5,7 +5,7 @@ use App\Http\Controllers\admin\FoodItemsController;
 use App\Http\Controllers\admin\MemberController;
 use App\Http\Controllers\admin\ReservationController;
 use App\Http\Controllers\Admin\SettingController;
-use App\Http\Controllers\admin\UsersController;
+use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaticPagesController;
 use App\Http\Controllers\Admin\FoodCategoriesController;
