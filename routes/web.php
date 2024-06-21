@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\admin\CustomersController;
-use App\Http\Controllers\admin\FoodItemsController;
-use App\Http\Controllers\admin\MemberController;
-use App\Http\Controllers\admin\ReservationController;
+use App\Http\Controllers\Admin\CustomersController;
+use App\Http\Controllers\Admin\FoodItemsController;
+use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\ProfileController;
