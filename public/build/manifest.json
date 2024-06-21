@@ -5,16 +5,16 @@
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-DZLbi0TX.js",
+    "file": "assets/app-BDUh40ys.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-D7r2nh4m.css"
+      "assets/app-C7FjcFOo.css"
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-D7r2nh4m.css",
+    "file": "assets/app-C7FjcFOo.css",
     "src": "resources/js/app.js"
   }
 }
