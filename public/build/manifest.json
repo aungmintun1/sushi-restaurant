@@ -1,20 +1,24 @@
 {
+  "public/img/sushi-bg.jpg": {
+    "file": "assets/sushi-bg-BDdYB1If.jpg",
+    "src": "public/img/sushi-bg.jpg"
+  },
   "resources/css/app.css": {
-    "file": "assets/app-BkjCpaTo.css",
+    "file": "assets/app-W1GE0nJ6.css",
     "src": "resources/css/app.css",
     "isEntry": true
   },
   "resources/js/app.js": {
-    "file": "assets/app-CgWukMJq.js",
+    "file": "assets/app-BoZh1kBd.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
     "css": [
-      "assets/app-V5oH6H-k.css"
+      "assets/app-LCW_3DBc.css"
     ]
   },
   "resources/sass/app.scss": {
-    "file": "assets/app-V5oH6H-k.css",
+    "file": "assets/app-LCW_3DBc.css",
     "src": "resources/js/app.js"
   }
 }
