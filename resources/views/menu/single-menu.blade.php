@@ -1,15 +1,9 @@
-@extends('layouts.full-menu')
-
-@section('title')
-Food Menu 
-@endsection
+@extends('layouts.app')
 
 @section('content')
     <div id="menu-page">
     
 
-
-  
      <div class="single-menu-box">
        <h2>{{$category->title}}</h2>
         @foreach ($category->food_items as $item )

@@ -4,17 +4,21 @@
         @include('includes.metatags')
     </head>
     <body>
-        <section id="app-layout">
-    @include('includes.side-menu')
-    <div class="welcome-jumbo">
-      <h1>A True Taste of Japanese Cousine</h1>
-      <div class="welcome-btn-container">
-        <button class="welcome-btn">Reservations</button>
-        <button class="welcome-btn">Get Offers</button>
-      </div>
-    </div>
-  </section>
+@include('includes.mobile-header')
+
+<section class="home">
+@include('includes.side-menu')
+<div class="home-bg">
+  <h1>A True Taste of Japanese Cousine</h1>
+  <div class="welcome-btn-container">
+    <button class="welcome-btn">Reservations</button>
+    <button class="welcome-btn">Get Offers</button>
+  </div>
+</div>
+</section>
   @yield('content')
+  
+
   <section id="footer">
     <img class="footer-logo" src="/img/sushi-logo.png">
 
@@ -60,7 +64,7 @@
       <a href="#">News</a><span> |</span>
       <a href="#">Reservation</a>
 
-      <p>Copyright © 2020 SushiFushi. All Rights Reserved.</p>
+      <p>Copyright © 2024 SushiFushi. All Rights Reserved.</p>
     </div>
   </section>
 
@@ -71,9 +75,19 @@
 
   const slides = document.querySelectorAll('.slide'); //array of all slides
   const slidingSystem = document.querySelector('.sliding-system'); //width of whole slide system 1800px
-  const slideWidth = slides[0].offsetWidth +36 ; //width of one slide 450px
+
+  if (window.innerWidth < 475) {
+     //mobile slider
+    slideWidth = slides[0].offsetWidth;
+    slideAmount = 1; 
+} else {
+  //desktop slider
+    slideWidth = slides[0].offsetWidth + 36; // Assuming the additional 38px margin or padding
+    slideAmount = 4; 
+}
+
   let slideMultiplier = 0; //multiplys by slide width each iteration
-  let slideAmount = 4; //slide counter state,
+
   const maxSlides = slides.length; //max slide limit, if equal then cant keep iterating next slide
 
   function updateSlider() {
@@ -108,70 +122,5 @@
 
   </script>
 
-  {{-- <script>
-    let slides = $('.sliding-system a.slide').length;
-    let maxSlides;
-    let moveTotal;
-    let currentSlide = 0;
-
-    $(window).resize(function(){
-      currentSlide = 0;
-      $('.sliding-system').css('transform', 'translate3d(-0%, 0,0');
-    })
-    function desktopSlider(){
-      if(a.matches){
-        maxSlides = Math.ceil((slides * 20) / 100);
-        moveTotal = 100;
-        // Right Button
-        $('.right-btn').on('click', () => {
-          console.log('clicked right btn')
-          if(currentSlide < maxSlides){
-            currentSlide += 100;
-            $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
-          }
-        });
-        // Left Button
-        $('.left-btn').on('click', () => {
-          console.log('clicked right btn')
-          if(currentSlide != 0){
-            currentSlide -= 100;
-            $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
-          }
-        });
-      }
-    }
-    var a = window.matchMedia("(min-width: 998px)")
-    desktopSlider(a);
-    a.addListener(desktopSlider);
-
-    function tabletSlider(){
-      if(b.matches){
-        maxSlides = Math.ceil((slides * 50) / 100);
-        moveTotal = 100;
-        
-        // Right Button
-        $('.right-btn').on('click', () => {
-          console.log('clicked right btn')
-          if(currentSlide < ((maxSlides * 100) - 100)){
-            currentSlide += 50;
-            $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
-          }
-        });
-        // Left Button
-        $('.left-btn').on('click', () => {
-          console.log('clicked right btn')
-          if(currentSlide != 0){
-            currentSlide -= 50;
-            $('.sliding-system').css('transform', `translate3d(-${currentSlide}%, 0, 0)`);
-          }
-        });
-      }
-    }
-    var b = window.matchMedia("(min-width: 768px) and (max-width: 997px");
-    console.log(b)
-    tabletSlider(b);
-    b.addListener(tabletSlider);
-
-  </script> --}}
     </body>
 </html>

@@ -54,14 +54,14 @@ class FoodCategorySeeder extends Seeder
         DB::table('food_categories')->insert([
             'title' => 'starters',
             'description' => "Begin your dining experience with our tantalizing starters, offering a variety of small bites to awaken your taste buds.",
-            'image_url' => '/img/starter.jpg',
+            'image_url' => '/img/starters1.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);
         DB::table('food_categories')->insert([
             'title' => 'mains',
             'description' => "Indulge in our exquisite main dishes, featuring a selection of expertly prepared sushi, sashimi, and other Japanese specialties.",
-            'image_url' => '/img/main.png',
+            'image_url' => '/img/main1.png',
             'updated_at' => Carbon::now(), 
             'created_at' => Carbon::now()
         ]);

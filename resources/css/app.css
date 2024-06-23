@@ -3,6 +3,9 @@
 @import './fontawesome-all.css';
 @import './bootstrap.min.css'; */
 
+@import './home';
+@import './navigation';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

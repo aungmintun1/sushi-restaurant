@@ -1,29 +1,33 @@
 #about-page {
-    height: 100vh;
-    padding-left: 100px;
+    height: auto;
+    width:80%;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     h1 {
-        font-size: 5rem;
+        font-size: 3rem;
         font-weight: 400;
-        line-height: 6rem;
+        line-height: 1.5;
         color: black;
         margin-bottom: 2.5rem;
     }
     p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 2;
         margin-bottom: 1rem;
         font-weight: 500;
     }
 
-    .about-container{
+    .about-us-container{
         display: flex;
-        gap:12rem;
-       margin-top:10rem;
+        justify-content: center;
+        align-items: center;
+        gap:8rem;
+   
     }
 
-    
-    .about-subheader{
+    .about-us-subheader{
         font-family: 'Barlow', sans-serif;
         font-size: 1.2rem;
         color: #b5945b;
@@ -31,56 +35,56 @@
         margin-bottom: .5rem;
     }
 
-    .about-paragraph{
+    .about-us-paragraph{
         width: 60ch;
-        font-size: 1.4rem;
+        font-size: 1rem;
         margin-bottom: 2.5rem;
     }
     .schedule-container{
-        width: 575px;
-        height: 700px;
+        width: 425px;
+        height: 500px;
         position: relative;
 
 
     }
     .schedule-box{
         background: url('/img/sushi.png') no-repeat top right #b5945b;
-        width: 575px;
-        height: 700px;
+        width: 425px;
+        height: 500px;
         position: absolute;
         z-index: 2;
         top:0;
         left:0;
-        padding:70px 100px;
+        padding:40px 50px;
     
         strong{
          font-weight: 700;
          color:white;
-         font-size:1.5rem;
+         font-size:1.1rem;
         }
 
       p{
         color:white;
-        font-size:1.2rem;
+        font-size:1rem;
       }
       h2{
         color:white;
-        font-size: 3rem;
+        font-size: 2rem;
         font-weight: 300;
-        margin-bottom: 2rem;
+        margin-bottom: .5rem;
       }
       .reserve-btn{
         margin-top:1rem;
-        padding: 1.2rem 2.5rem;
+        padding: .8rem 1.8rem;
         color:black;
         border:solid black 3px;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         transition: all 0.5s;
       }
       .reserve-btn:hover{
         background-color: #4a2c2d;
         color:white;
-        border:no
+        border:none;
       }
     
 
@@ -98,23 +102,122 @@
         
     }
 
-@media (min-width: 0px) and (max-width: 767px) {
-    #about-page {
-        padding: 20px;
+@media (max-width: 1024px) {
+   #about-page {
+    width:100%;
+    margin-top:5rem;
+    margin-bottom:2rem;
+
+        .about-us-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap:3rem;
+   
     }
-}
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {
-    #about-page {
-        padding: 20px;
+    .schedule-container{
+        width: 425px;
+        height: 500px;
+        position: static;
+
     }
+    .schedule-box{
+        background: url('/img/sushi.png') no-repeat top right #b5945b;
+        width: 425px;
+        height: 500px;
+        position: static;
+        padding:40px 50px;
+    
+        strong{
+         font-weight: 700;
+         color:white;
+         font-size:1.1rem;
+        }
+
+      p{
+        color:white;
+        font-size:1rem;
+      }
+      h2{
+        color:white;
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: .5rem;
+      }
+      .reserve-btn{
+        margin-top:1rem;
+        padding: .8rem 1.8rem;
+        color:black;
+        border:solid black 3px;
+        font-size: 1.2rem;
+        transition: all 0.5s;
+      }
+      .reserve-btn:hover{
+        background-color: #4a2c2d;
+        color:white;
+        border:none;
+      }
+    
+
+      }
+      svg{
+        display:none;
+      }
+
+}
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 475px) {
+    #about-page{
+    padding:2rem;
+    text-align: center;
+    .about-us-subheader{
+        font-family: 'Barlow', sans-serif;
+        font-size: 1.2rem;
+        color: #b5945b;
+        font-weight: 500;
+        margin-bottom: .5rem;
+    }
+    h1 {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        margin-bottom: 2rem;
+    }
+
+    .about-us-paragraph{
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .schedule-container{
+        width: 100%;
+        height: 100%;
+        position: static;
+
+    }
+    .schedule-box{
+        background: url('/img/sushi.png') no-repeat top right #b5945b;
+        width: 100%;
+        height: 100%;
+        position: static;
+        padding:40px 50px;
+        border-radius: 10px;
+
+        .reserve-btn{
+            margin-top:1rem;
+            padding: 1rem;
+            color:black;
+            border:solid black 3px;
+            font-size: 1.2rem;
+            transition: all 0.5s;
+          }
+    }
+      
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
 }

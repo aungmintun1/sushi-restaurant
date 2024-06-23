@@ -1,19 +1,13 @@
 @extends('layouts.app')
 
-@section('title')
-{{-- About - {{$settings["general"]->site_title}}  --}}
-@endsection
-
-
-
 @section('content')
     <div id="about-page">
-      <div class="about-container">
+      <div class="about-us-container">
 
         <div class="about-text">
-          <h2 class="about-subheader">Who We Are</h2>
+          <h2 class="about-us-subheader">Who We Are</h2>
           <h1 class="about-header">The freshest taste <br> and Japanese cuisine</h1>
-          <p class="about-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.
+          <p class="about-us-paragraph">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris fermentum dictum magna. Sed laoreet aliquam leo.
              Ut tellus dolor, dapibus eget, elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam erat volutpat.
               Duis ac turpis. Integer rutrum ante eu lacus. Vestibulum libero nisl, scelerisque eget, malesuada at, neque. Vivamus eget nibh.
              Etiam cursus leo vel metus.</p>

@@ -1,139 +1,25 @@
-#menu-layout{
-    display: grid;
-    // grid-template-columns: 350px 1fr;
-    width: 100%;
-    height: auto;
-    .side-menu {
-        position: fixed;
-        background:white;
-        padding-top:50px;
-  
-        height: 100vh;
-        width: 400px;
-        z-index:0;
-      
-       
-        .side-menu-bg{
-            background: url('/img/sushi-sidemenu.png');
-            background-size: cover;
-            width: 400px;
-            z-index: -1;
-            height: 400px;
-          
-        }
-        .logo {
-  
-            display: flex;
-            justify-content: center;
-            margin-bottom: 50px;
-            img {
 
-                width: 300px;
-             
-            }
-        }
-        .menu {
-            margin-left: 30px;
-            margin-bottom: 50px;
-            .menu-title {
-                text-transform: uppercase;
-                color: #0971ce;
-                font-weight: 700;
-                font-size: 1.2rem;
-                border-bottom: 1px solid #e2eaef;
-                padding-bottom: 20px;
-                margin-bottom: 20px;
-            }
-            .links {
-                li {
-                    a {
-                        font-size: 1.6rem;
-                        color: black;
-                        font-weight: 700;
-                        text-decoration: none;
-                        margin-bottom: 1.4rem;
-                        display: block;
-                        transition: color 0.3s ease-in-out;
-                        &:hover {
-                            color: red;
-                        }
-                    }
-                }
-            }
-        }
-        .sidemenu-link{
-            font-size: 1.1rem;
-            color: black;
-            font-weight: 700;
-            text-decoration: none;
-            margin-bottom: 1.4rem;
-            display: block;
-            transition: color 0.3s ease-in-out;
-
-        }
-        .social-icons {
-            display: flex;
-            margin-left: 30px;
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: #c2c8cc;
-                font-size: 0.9rem;
-                text-decoration: none;
-                color: white;
-                height: 30px;
-                width: 30px;
-                border-radius: 50%;
-                margin-right: 10px;
-            }
-        }
-        .location {
-            align-self: center;
-            position: absolute;
-            bottom: 100px;
-            .address {
-                color: #7a8d99;
-                margin-bottom: 20px;
-                line-height: 1.7;
-            }
-            .phone-number {
-                a {
-                    color: #0971ce;
-                    font-size: 2rem;
-                    font-weight: 700;
-                    text-decoration: none;
-                }
-            }
-        }
-   
-    }
-
-    #content-section {
-        transform: translate3d(400px, 0, 0);
-        max-width: calc(100vw - 400px);
-  
-    }
-}
 
 #menu-page {
     padding: 100px 15px;
+    height:auto;
+    width:80%;
   h2{
-    font-size:4rem;
+    font-size:2rem;
     color:#b5945b;
     font-weight: 300;
     text-transform: capitalize;
   }
   p{
     font-family: sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #7a7879;
   }
 
   .menu-container{
     display: flex;
     flex-wrap: wrap;
-    gap:2rem;
+    gap:1rem;
     justify-content: center;
   }
 
@@ -158,12 +44,12 @@
     gap:1rem;
 
     h3{
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         margin-bottom:1rem;
         font-weight: 500;
     }
     .price{
-        font-size: 1.8rem;
+        font-size: 1.2rem;
         margin-bottom:1rem;
         color: black;
     }
@@ -185,23 +71,60 @@
     gap:2rem;
     justify-content: center;
 }
-@media (min-width: 0px) and (max-width: 767px) {
+
+//all-categories media query
+@media (max-width: 1024px) {
     #menu-page {
-        padding: 20px;
+        width: 100%;
+        padding:100px 5px;
+       display: flex;
+       justify-content: center;
+
+       .single-menu-box{
+        width: 100%;
+        padding: 20px 20px 0 20px;
     }
+    }
+
+
+
 }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {
-    #menu-page {
-        padding: 20px;
+@media (max-width: 768px) {
+
+#menu-page{
+
+    h2{
+        text-align: center;
+    }
+    p{
+       
+        font-size: .7rem;
+      
+      }
+    .menu-container{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap:1rem;
+        justify-content: start;
+        align-items: center;
+
+        .menu-box{
+            width: 100%;
+          }
+      }
     }
 }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
+@media (max-width: 475px) {
+    .menu-container{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        gap:1rem;
+        justify-content: start;
+        align-items: center;
+      }
 }

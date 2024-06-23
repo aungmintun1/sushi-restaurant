@@ -1,13 +1,14 @@
 #offers-page {
     padding: 100px;
     h1 {
-        font-size: 3rem;
-        font-weight: 700;
+        font-size: 2.5rem;
+        font-weight: 500;
         color: black;
         margin-bottom: 2.5rem;
+        text-align: center;
     }
     p {
-        font-size: 0.9rem;
+        font-size: 0.7rem;
         line-height: 2;
         margin-bottom: 2rem;
         font-weight: 500;
@@ -27,15 +28,15 @@
             .form-control {
                 padding: 10px !important;
                 border: 2px solid #9c1b24;
-                font-size: 1.3rem;
+                font-size: 1rem;
                 box-sizing: border-box;
                 height: auto;
             }
             button[type="submit"] {
                 background: #9c1b24;
                 border: none;
-                padding: 20px 40px;
-                font-size: 1.2rem;
+                padding: 12px 30px;
+                font-size: 1rem;
                 transition: all 0.5s;
 
              
@@ -48,26 +49,41 @@
         }
     }
 }
-@media (min-width: 0px) and (max-width: 767px) {
+@media (max-width: 1024px) {
     #offers-page {
         padding: 20px;
+        margin-top: 5rem;
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        p {
+            font-size: 0.7rem;
+            line-height: 2;
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        form {
+            .form-group {
+               
+                button[type="submit"] {
+                    background: #9c1b24;
+                    border: none;
+                    padding: 15px 40px;
+                    font-size: 1.2rem;
+                    transition: all 0.5s;
+                    
+                 
+                }
+    
+                button[type="submit"]:hover{
+                    background-color: #420f12;
+                }
+               
+            }
         }
     }
 }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) and (max-width: 991px) {
-    #offers-page {
-        padding: 20px;
-    }
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-}

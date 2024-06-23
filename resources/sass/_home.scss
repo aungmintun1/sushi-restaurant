@@ -6,24 +6,7 @@
   align-items: center;
   flex-direction: column;
   gap:2rem;
-//   background: #ed4852; /* Old browsers */
-//   background: -moz-radial-gradient(
-//       center,
-//       ellipse cover,
-//       #ed4852 0%,
-//       #9c1b24 100%
-//   ); /* FF3.6-15 */
-//   background: -webkit-radial-gradient(
-//       center,
-//       ellipse cover,
-//       #ed4852 0%,
-//       #9c1b24 100%
-//   ); /* Chrome10-25,Safari5.1-6 */
-//   background: radial-gradient(
-//       ellipse at center,
-//       #ed4852 0%,
-//       #9c1b24 100%
-//   ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
 background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)),url("/img/sushi-bg.jpg");
 background-size: cover;
   overflow: hidden;
@@ -41,19 +24,19 @@ background-size: cover;
       margin-bottom: 20px;
   }
   h1 {
-      font-size: 5rem;
-      font-weight: 400;
+      font-size: 4rem;
+      font-weight: 300;
       color: white;
       width: 15ch;
       text-align: center;
 
   }
   .welcome-btn{
-    padding:1.5rem 4rem;
+    padding:1.5rem 3rem;
     border: solid red 2px;
     color:white;
     font-size: 1.7rem;
-    font-weight: 500;
+    font-weight: 400;
     margin-right:.5rem;
     transition: all 0.5s;
   }
