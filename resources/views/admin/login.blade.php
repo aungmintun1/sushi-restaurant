@@ -54,8 +54,8 @@
                             <input class="custom-control-input" type="checkbox"><span class="custom-control-label">Remember Me</span>
                         </label>
                     </div>
-                    <p>aung@gmail.com</p>
-                    <p>password</p>
+                    <p>username: billy@gmail.com</p>
+                    <p>password: 12345678</p>
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
                 </form>
             </div>
