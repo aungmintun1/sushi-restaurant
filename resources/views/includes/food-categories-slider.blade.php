@@ -24,7 +24,7 @@
                   {{$category->description}}
                 </p>
                 <div class="food-image">
-                  <img src="{{$category->image_url}}">
+                  <img src="/img/{{$category->image_url}}">
                 </div>
               </div>
           </a>

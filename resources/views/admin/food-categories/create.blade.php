@@ -36,7 +36,7 @@
                     <div class="card">
                         <h5 class="card-header">Create New Food Category</h5>
                         <div class="card-body">
-                            <form id="basicform" method="POST" action="/admin/food-categories">
+                            <form id="basicform" method="POST" action="/admin/food-categories" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="inputCategory">Category Title</label>
@@ -44,7 +44,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCategoryImageUrl">Category Image Url</label>
-                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" required="" value="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                    <input id="inputCategoryImageUrl" type="file" name="image_url" accept=".png, .jpg, .jpeg"  class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCategoryImageUrl">Category Description</label>

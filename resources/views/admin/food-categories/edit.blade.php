@@ -36,20 +36,20 @@
                     <div class="card">
                         <h5 class="card-header">Edit Food Category</h5>
                         <div class="card-body">
-                            <form id="basicform" method="POST" action="/admin/food-categories/{{$category->id}}">
+                            <form id="basicform" method="POST" action="/admin/food-categories/{{$category->id}}" enctype="multipart/form-data">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
                                     <label for="inputCategory">Edit Category Name</label>
-                                    <input id="inputCategory" type="text" name="title" data-parsley-trigger="change" value="{{$category->title}}" required="" placeholder="Enter Category Name" autocomplete="off" class="form-control">
+                                    <input id="inputCategory" type="text" name="title" data-parsley-trigger="change" value="{{$category->title}}" placeholder="Enter Category Name" autocomplete="off" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCategoryDescription">Edit Category Description</label>
-                                    <input id="inputCategoryDescription" type="text" name="Description" data-parsley-trigger="change" value="{{$category->description}}" required="" placeholder="lorem ipsum" autocomplete="off" class="form-control">
+                                    <input id="inputCategoryDescription" type="text" name="description" data-parsley-trigger="change" value="{{$category->description}}"  placeholder="lorem ipsum" autocomplete="off" class="form-control">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputCategoryImageUrl">Edit Category Image Url</label>
-                                    <input id="inputCategoryImageUrl" type="text" name="image_url" data-parsley-trigger="change" value="{{$category->image_url}}" required="" placeholder="http://www.billys.com/img/burger.jpg" autocomplete="off" class="form-control">
+                                    <input id="inputCategoryImageUrl" type="file" name="image_url" accept=".png, .jpg, .jpeg" class="form-control">
                                 </div>
                               
                                 <div class="row">
