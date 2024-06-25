@@ -16,11 +16,6 @@ return Application::configure(basePath: dirname(__DIR__))
             'role' => Role::class,
             ]);
 
-        $middleware->trustProxies(at: [
-                '192.168.1.1',
-                '192.168.1.2',
-            ]);
-            
         $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {
