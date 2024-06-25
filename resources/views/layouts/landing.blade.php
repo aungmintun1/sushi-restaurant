@@ -11,8 +11,12 @@
 <div class="home-bg">
   <h1>A True Taste of Japanese Cousine</h1>
   <div class="welcome-btn-container">
+    <a href="/reservations">
     <button class="welcome-btn">Reservations</button>
+     </a>
+     <a href="/offers">
     <button class="welcome-btn">Get Offers</button>
+    </a>
   </div>
 </div>
 </section>
