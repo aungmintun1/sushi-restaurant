@@ -12,7 +12,7 @@ class FoodItemsController extends Controller
     
     public function index(){
         //$items=FoodItem::All();
-        $items = FoodItem::paginate(10);
+        $items = FoodItem::paginate(15);
         return view('admin/food-items/all',[
             'items'=>$items,
         ]);
@@ -22,7 +22,7 @@ class FoodItemsController extends Controller
     {
         // Validate the input
         $request->validate([
-            'name' => 'required|string|max:255',
+            'name' => 'nullable|string|max:255',
             'min_price' => 'nullable|numeric|min:0',
             'max_price' => 'nullable|numeric|min:0',
         ]);

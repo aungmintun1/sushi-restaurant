@@ -18,17 +18,17 @@ class AdminController extends Controller
         // return response()->json($user->roles);
         $estimated_income_last_30 = DB::table('reservations')
         ->select(DB::raw('SUM(guests_total) * 27 AS total'))
-        ->whereBetween('created_at', [now()->subDays(30), now()])
+        // ->whereBetween('created_at', [now()->subDays(30), now()])
         ->first();
 
         $total_customers_last_30 = DB::table('reservations')
         ->select(DB::raw('SUM(guests_total) AS total'))
-        ->whereBetween('created_at', [now()->subDays(30), now()])
+        // ->whereBetween('created_at', [now()->subDays(30), now()])
         ->first();
         
         $total_customers_last_30 = DB::table('reservations')
         ->select(DB::raw('count(*) AS total'))
-        ->whereBetween('created_at', [now()->subDays(30), now()])
+        // ->whereBetween('created_at', [now()->subDays(30), now()])
         ->first();
 
         $total_employees = DB::table('users')
@@ -42,6 +42,8 @@ class AdminController extends Controller
         // We then substitute role id and user id columns with the id's of the respective tables.
         // Now user->roles->id will give us the id of the role and we only want users that are employee which is 2
         // last we count
+
+        //note that i commented out the whereBetween last 30 days because if data hasn't been changed in the last 30 days nothing will show, only 0
 
         $total_income = $estimated_income_last_30->total ?? 0;
         $total_customers= $total_customers_last_30->total ?? 0;

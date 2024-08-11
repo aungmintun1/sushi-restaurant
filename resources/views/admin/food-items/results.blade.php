@@ -15,7 +15,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="/dashboard" class="breadcrumb-link">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Food Items</li>
+                                <li class="breadcrumb-item active" aria-current="page"><a href="/admin/food-items" class="breadcrumb-link">Food Items</a></li>
                             </ol>
                         </nav>
                     </div>
@@ -31,7 +31,7 @@
                     <form action="/admin/food-items/results" method="GET" class="flex flex-col items-start gap-4 max-w-md mx-auto p-4 bg-white rounded-lg">
                         <div class="w-full">
                             <label for="name" class="block text-lg mb-2">Food Item Name</label>
-                            <input type="text" name="name" id="name" required class="w-full mb-4 p-2 border border-gray-300 rounded">
+                            <input type="text" name="name" id="name" class="w-full mb-4 p-2 border border-gray-300 rounded">
                         </div>
                         <div class="w-full">
                             <label for="min_price" class="block text-lg  mb-2">Min Price</label>
